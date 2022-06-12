@@ -1,10 +1,8 @@
 import AsyncSelect from "react-select/async";
 import { useDebouncedCallback } from "use-debounce";
-import axios from "axios";
 import { Alert } from "react-bootstrap";
 import React, { useState } from "react";
 import { Request } from "../../services/httpClient";
-import { ActionMeta } from "react-select";
 
 interface IPostalCodeSearch
 {
@@ -20,8 +18,7 @@ export default function PostalCodeSearch(props:IPostalCodeSearch){
       if (value.length < minLengthAutocomplete) {
         return cb([]);
       }
-      //const url = `https://api.postcodes.io/postcodes/${value}/autocomplete`;
-      Request({url:`/autocomplete/${value}`,method:'GET'}) .then((response) => {
+      Request({url:`/autocomplete/${value}`,method:'GET'}).then((response) => {
         if (response.data?.result?.length) {
           setnoData(false);
           let postCodes = response.data.result.map((x:string) => {

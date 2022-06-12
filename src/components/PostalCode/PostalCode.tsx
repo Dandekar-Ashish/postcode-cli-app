@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import PostalCodeSearch from "../PostalCodeSearch/PostalCodeSearch";
 import PostalDetails from '../PostalDetails/PostalDetails';
-import axios from 'axios';
 import { Request } from "../../services/httpClient";
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from 'react-bootstrap/Navbar'
 
 // import PostalDetails from "./components/PostalDetails";
 interface IPostalDataCodes
@@ -32,26 +36,38 @@ function PostalCode() {
   }
     return (
         <React.Fragment>
-            <div className="container-fluid p-5 bg-primary text-white text-center">
-                <h1>
-                   Postal Code Search
-                </h1>
+            <Navbar bg="primary" variant="dark">
+            <Container>
                 
-            </div>
+            <div className="col-md-12">
+                            <h1>
+                            Postal Code Search
+                            </h1>
+                    </div>
+                
+            </Container>
+            </Navbar>
 
-            <div className="container-fluid mt-5">
+            <div className="container-fluid">
+                <br></br>
                 <div className="row">
-                    <div className="col">
-                       <PostalCodeSearch handlePostCodeSelection={handlePostCodeSelection} />
+                    <div className="col-md-4">
+                    </div>
+                    <div className="col-md-4">
+                        <PostalCodeSearch handlePostCodeSelection={handlePostCodeSelection} />
+                    </div>
+                    <div className="col-md-4">
                     </div>
                 </div>
+                <br></br>
                 <div className="row">
-                    <div className="col">
-                       <PostalDetails postalData={postalData} />
-                    </div>
+                        <div className="col">
+                        <PostalDetails postalData={postalData} />
+                        </div>
                 </div>
             </div>
         </React.Fragment>
+        
     );
 }
 
