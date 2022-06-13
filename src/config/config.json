@@ -1,5 +1,5 @@
 {
     "PostCode":{
-        "PostCodeAPIUrl" :"https://1ubq4bjlga.execute-api.us-east-1.amazonaws.com/Prod/api/postcode"
+        "PostCodeAPIUrl" :"https://7u0y11cz7f.execute-api.us-east-1.amazonaws.com/Prod/api/postcode"
      }
 }

@@ -27,8 +27,8 @@ function PostalCode() {
   const handlePostCodeSelection = (postCode: any) => {
     //const url = `https://api.postcodes.io/postcodes/${postCode}`;
     Request({url:`/${postCode}`,method:'GET'}).then((response) => {
-      if (response.data.result) {
-       setpostalData(response.data.result);
+      if (response.data) {
+       setpostalData(response.data);
       }  else {
         setpostalData(null);
       }

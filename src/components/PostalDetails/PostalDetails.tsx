@@ -40,7 +40,7 @@ export default function PostalDetails(props: { postalData: any; }) {
                     <Card border="secondary" style={{ width: '18rem' }}>
                         <Card.Header>Admin District</Card.Header>
                         <Card.Body>
-                        <Card.Title>{postalData.codes.admin_district}</Card.Title>
+                        <Card.Title>{postalData.admin_district}</Card.Title>
                         </Card.Body>
                     </Card>
                 </div>
@@ -48,7 +48,7 @@ export default function PostalDetails(props: { postalData: any; }) {
                     <Card border="secondary" style={{ width: '18rem' }}>
                         <Card.Header>Parliamentary Constituency</Card.Header>
                         <Card.Body>
-                        <Card.Title>{postalData.codes.parliamentary_constituency}</Card.Title>
+                        <Card.Title>{postalData.parliamentary_constituency}</Card.Title>
                         </Card.Body>
                     </Card>
                 </div>
